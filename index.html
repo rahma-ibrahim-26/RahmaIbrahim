@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رحمة ابراهيم | أخصائية نفسية</title>
+
+  <!-- Google Font: Tajawal (Elegant Arabic Typography) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* =======================================================
+       🎨 Palette Applied directly from her Brand Guide
+       ======================================================= */
+    :root {
+      --dark-petrol:    #1F4A49; /* Main Headings & accents */
+      --medium-petrol:  #2E6A66; /* Subtitles & hover */
+      --sage-green:     #6F8F85; /* Borders & subtle accents */
+      --light-green:    #BFD2C7; /* Soft dividers */
+      --cream-bg:       #F9F6EF; /* Main background */
+      --light-bg-subtle:#E6EFEA; /* Card gradients */
+      --gold-accent:    #D4AF6B; /* Warm CTA & highlights */
+      --card-white:     #FFFFFF; /* Link buttons background */
+      --text-muted:     #3E5D59; /* Secondary text */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(180deg, var(--cream-bg) 0%, var(--light-bg-subtle) 100%);
+      color: var(--dark-petrol);
+      display: flex;
+      justify-content: center;
+      padding: 36px 16px 50px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px; /* Ideal mobile card proportion */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* --- Profile Image --- */
+    .avatar-wrapper {
+      position: relative;
+      margin-bottom: 16px;
+    }
+
+    .avatar {
+      width: 115px;
+      height: 115px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold-accent);
+      box-shadow: 0 10px 25px rgba(31, 74, 73, 0.15);
+    }
+
+    /* --- Name & Title --- */
+    .name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--dark-petrol);
+      margin-bottom: 6px;
+    }
+
+    .role-badge {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--medium-petrol);
+      background-color: rgba(191, 210, 199, 0.4);
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      border: 1px solid var(--light-green);
+    }
+
+    .bio {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      padding: 0 8px;
+    }
+
+    /* --- Featured Portrait Video Card ---
+    .video-card {
+      width: 100%;
+      background: var(--card-white);
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: 0 8px 24px rgba(31, 74, 73, 0.08);
+      border: 1px solid var(--light-green);
+      margin-bottom: 24px;
+    } */
+
+    /* .video-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--medium-petrol);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    } */
+
+    /* .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 280px; /* Keeps the vertical reel elegant and not oversized */
+      margin: 0 auto;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 9 / 16; /* Clean mobile portrait ratio */
+      background: #000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    /* } */
+
+    /* .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    } */
+
+    /* --- Social Media Links Stack --- */
+    .links-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background: var(--card-white);
+      color: var(--dark-petrol);
+      text-decoration: none;
+      border-radius: 16px;
+      border: 1.5px solid var(--light-green);
+      box-shadow: 0 4px 12px rgba(31, 74, 73, 0.05);
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold-accent);
+      box-shadow: 0 8px 20px rgba(31, 74, 73, 0.12);
+    }
+
+    .link-content {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .link-content i {
+      font-size: 1.35rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .arrow-icon {
+      font-size: 0.85rem;
+      color: var(--sage-green);
+      transition: transform 0.2s ease;
+    }
+
+    .link-card:hover .arrow-icon {
+      transform: translateX(-4px); /* Moves left in RTL */
+      color: var(--gold-accent);
+    }
+
+    /* Icon brand accents */
+    .icon-whatsapp  { color: #25D366; }
+    .icon-instagram { color: #E1306C; }
+    .icon-tiktok    { color: #000000; }
+    .icon-facebook  { color: #1877F2; }
+
+    /* Footer */
+    .footer {
+      margin-top: 30px;
+      font-size: 0.78rem;
+      color: var(--sage-green);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Profile Picture -->
+    <div class="avatar-wrapper">
+      <!-- Save her photo as 'profile.jpg' in the same folder -->
+      <img src="profile.jpeg" alt="رحمة ابراهيم" class="avatar" />
+    </div>
+
+    <!-- Name & Title -->
+    <h1 class="name">رحمة ابراهيم</h1>
+    <div class="role-badge">أخصائية نفسية</div>
+    <p class="bio">نقترب, نفهم... فنهدأ ونتقبل.</p>
+
+    Portrait Video Highlight
+    <div class="video-card">
+      <div class="video-label">
+        <i class="fa-solid fa-play" style="color: var(--gold-accent); font-size: 0.8rem;"></i>
+        <span>فيديو تعريفي</span>
+      </div>
+      <div class="video-wrapper">
+        <!-- Save her portrait video as 'intro.mp4' in the same folder -->
+        <video controls playsinline preload="metadata" poster="profile.jpg">
+          <source src="intro.mp4" type="video/mp4" />
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </div>
+    </div>
+
+    <!-- Links List -->
+    <div class="links-wrapper">
+
+      <!-- WhatsApp (Direct Chat with Egyptian Number) -->
+      <a href="https://wa.me/201031210592" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-content">
+          <i class="fa-brands fa-whatsapp icon-whatsapp"></i>
+          <span>واتساب (تواصل / حجز)</span>
+        </div>
+        <i class="fa-solid fa-chevron-left arrow-icon"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/1C7WFiNSZN/" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-content">
+          <i class="fa-brands fa-facebook-f icon-facebook"></i>
+          <span>فيسبوك</span>
+        </div>
+        <i class="fa-solid fa-chevron-left arrow-icon"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/rahma_ibrahim_26" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-content">
+          <i class="fa-brands fa-instagram icon-instagram"></i>
+          <span>انستجرام</span>
+        </div>
+        <i class="fa-solid fa-chevron-left arrow-icon"></i>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@rahma_ibrahim_26" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-content">
+          <i class="fa-brands fa-tiktok icon-tiktok"></i>
+          <span>تيك توك</span>
+        </div>
+        <i class="fa-solid fa-chevron-left arrow-icon"></i>
+      </a>
+
+    </div>
+
+    <div class="footer">
+      جميع الحقوق محفوظة © رحمة ابراهيم
+    </div>
+
+  </div>
+
+</body>
+</html>
