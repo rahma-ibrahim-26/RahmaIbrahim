@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>رحمة ابراهيم | أخصائي نفسي إكلينيكي ومشير إدمان</title>
+  <title>رحمة إبراهيم | أخصائي نفسي إكلينيكي ومشير إدمان</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
@@ -31,6 +31,7 @@
     .name { font-size: 1.5rem; font-weight: 800; }
     .role-badge { font-size: 0.9rem; font-weight: 700; background: rgba(191,210,199,0.45); padding: 5px 16px; border-radius: 20px; border: 1px solid var(--light); }
     .bio { font-size: 0.88rem; color: #3E5D59; line-height: 1.5; padding: 0 10px; }
+    .contact { font-size: 0.88rem; color: #3E5D59; line-height: 1.5; padding: 0 10px; }
 
     /* Cards */
     .card { width: 100%; background: var(--white); border-radius: 16px; padding: 14px; border: 1px solid var(--light); box-shadow: 0 4px 14px rgba(31,74,73,0.05); text-align: right; }
@@ -52,7 +53,7 @@
 
     /* Video */
     .video-frame { width: 100%; max-width: 250px; margin: 0 auto; border-radius: 12px; overflow: hidden; aspect-ratio: 9/16; background: #000; }
-    .video-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .video-frame video { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
 
     /* Social Links */
     .social-row {
@@ -95,12 +96,21 @@
   <div class="container">
 
     <!-- Profile Header -->
-    <img src="profile.jpeg" alt="رحمة ابراهيم" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=رحمة+ابراهيم&background=1F4A49&color=fff&size=200'" />
-    <h1 class="name">رحمة ابراهيم</h1>
-    <div class="role-badge">أخصائي نفسي إكلينيكي • مشير إدمان</div>
+    <img src="profile.jpeg" alt="رحمة إبراهيم" class="avatar" onerror="this.src='https://ui-avatars.com/api/?name=رحمة+إبراهيم&background=1F4A49&color=fff&size=200'" />
+    <h1 class="name">رحمة إبراهيم</h1>
+    <div class="role-badge">أخصائي نفسي إكلينيكي ومشير إدمان</div>
     <p class="bio">نقترب, نفهم... فنهدأ, ونتقبل.</p>
 
-    <!-- 1. Booking Section -->
+    <!-- 1. Clinic Location -->
+    <div class="card">
+      <div class="card-title"><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> عنوان العيادة</div>
+      <p style="font-size:0.88rem; line-height:1.5; margin-bottom:12px;">المحلة الكبرى، شارع شكري القوتلي، بجوار ألبان مشعل، أعلى صيدلية Safe Care</p>
+      <a href="https://www.google.com/maps?q=30.9771216,31.1719452&z=17&hl=en" target="_blank" class="btn-maps">
+        <i class="fa-solid fa-map-location-dot"></i> فتح الموقع على خرائط Google
+      </a>
+    </div>
+
+    <!-- 2. Booking Section -->
     <div class="card">
       <div class="card-title"><i class="fa-solid fa-calendar-check" style="color:var(--gold);"></i> لحجز الجلسات</div>
       
@@ -128,19 +138,10 @@
       </div>
     </div>
 
-    <!-- 2. Clinic Location -->
-    <div class="card">
-      <div class="card-title"><i class="fa-solid fa-location-dot" style="color:var(--gold);"></i> عنوان العيادة</div>
-      <p style="font-size:0.88rem; line-height:1.5; margin-bottom:12px;">المحلة الكبرى، شارع شكري القوتلي، بجوار ألبان مشعل، أعلى صيدلية Safe Care</p>
-      <a href="https://www.google.com/maps?q=30.9771216,31.1719452&z=17&hl=en" target="_blank" class="btn-maps">
-        <i class="fa-solid fa-location-arrow"></i> فتح الموقع على خرائط Google
-      </a>
-    </div>
-
     <!-- 3. Portrait Video -->
     <div class="card" style="padding:10px;">
       <div class="video-frame">
-        <video controls playsinline preload="metadata" poster="profile.jpeg">
+        <video controls playsinline webkit-playsinline preload="metadata" poster="profile.jpeg">
           <source src="intro.mp4" type="video/mp4" />
         </video>
       </div>
@@ -148,6 +149,7 @@
 
     <!-- 4. Social Links -->
 
+    <p class="contact">تابعني على وسائل التواصل الاجتماعي</p>
     <!-- Social Icons Row -->
     <div class="social-row">
       <a href="https://www.tiktok.com/@rahma_ibrahim_26" target="_blank" class="social-btn" aria-label="TikTok">
@@ -162,7 +164,7 @@
 
     </div>
 
-    <div class="footer">جميع الحقوق محفوظة © رحمة ابراهيم</div>
+    <div class="footer">جميع الحقوق محفوظة © رحمة إبراهيم</div>
 
   </div>
 
