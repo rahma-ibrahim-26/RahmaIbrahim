@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>رحمة إبراهيم | أخصائية نفسية إكلينيكة</title>
+  <title>رحمة ابراهيم | أخصائي نفسي إكلينيكي ومشير إدمان</title>
 
   <!-- Google Font: Tajawal (Elegant Arabic Typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,18 +15,18 @@
 
   <style>
     /* =======================================================
-       🎨 Palette Applied directly based on Brand Guide
+       🎨 Palette Applied directly from her Brand Guide
        ======================================================= */
     :root {
-      --dark-petrol:    #1F4A49; /* Main Headings & accents */
-      --medium-petrol:  #2E6A66; /* Subtitles & hover */
-      --sage-green:     #6F8F85; /* Borders & subtle accents */
-      --light-green:    #BFD2C7; /* Soft dividers */
-      --cream-bg:       #F9F6EF; /* Main background */
-      --light-bg-subtle:#E6EFEA; /* Card gradients */
-      --gold-accent:    #D4AF6B; /* Warm CTA & highlights */
-      --card-white:     #FFFFFF; /* Link buttons background */
-      --text-muted:     #3E5D59; /* Secondary text */
+      --dark-petrol:    #1F4A49; 
+      --medium-petrol:  #2E6A66; 
+      --sage-green:     #6F8F85; 
+      --light-green:    #BFD2C7; 
+      --cream-bg:       #F9F6EF; 
+      --light-bg-subtle:#E6EFEA; 
+      --gold-accent:    #D4AF6B; 
+      --card-white:     #FFFFFF; 
+      --text-muted:     #3E5D59; 
     }
 
     * {
@@ -47,17 +47,17 @@
 
     .container {
       width: 100%;
-      max-width: 420px; /* Ideal mobile card proportion */
+      max-width: 440px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
-    /* --- Profile Image --- */
+    /* --- Profile Header --- */
     .avatar-wrapper {
       position: relative;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .avatar {
@@ -65,13 +65,12 @@
       height: 115px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--gold-accent);
+      border: 3.5px solid var(--gold-accent);
       box-shadow: 0 10px 25px rgba(31, 74, 73, 0.15);
     }
 
-    /* --- Name & Title --- */
     .name {
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-weight: 800;
       color: var(--dark-petrol);
       margin-bottom: 6px;
@@ -79,127 +78,248 @@
 
     .role-badge {
       display: inline-block;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
-      color: var(--medium-petrol);
-      background-color: rgba(191, 210, 199, 0.4);
-      padding: 4px 16px;
+      color: var(--dark-petrol);
+      background-color: rgba(191, 210, 199, 0.45);
+      padding: 6px 18px;
       border-radius: 20px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       border: 1px solid var(--light-green);
+      line-height: 1.5;
     }
 
     .bio {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 24px;
-      padding: 0 8px;
+      line-height: 1.5;
+      margin-bottom: 22px;
+      padding: 0 10px;
     }
 
-    /* --- Featured Portrait Video Card --- */
-    .video-card {
-      width: 100%;
-      background: var(--card-white);
-      border-radius: 20px;
-      padding: 12px;
-      box-shadow: 0 8px 24px rgba(31, 74, 73, 0.08);
-      border: 1px solid var(--light-green);
-      margin-bottom: 24px;
-    } */
-
-    .video-label {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--medium-petrol);
+    /* --- Common Section Styles --- */
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--dark-petrol);
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
+    }
+
+    .section-card {
+      width: 100%;
+      background: var(--card-white);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(31, 74, 73, 0.06);
+      border: 1px solid var(--light-green);
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    /* --- Booking Cards --- */
+    .booking-item {
+      padding: 12px 14px;
+      background: var(--light-bg-subtle);
+      border-radius: 14px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(191, 210, 199, 0.6);
+    }
+
+    .booking-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .booking-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .booking-type {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--dark-petrol);
+      display: flex;
+      align-items: center;
       gap: 6px;
-      margin-bottom: 10px;
+    }
+
+    .booking-phone {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--medium-petrol);
+      direction: ltr; /* Keeps Egyptian mobile numbers clean */
+    }
+
+    .action-btn-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-action {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-call {
+      background: var(--dark-petrol);
+      color: #ffffff;
+    }
+
+    .btn-call:hover {
+      background: var(--medium-petrol);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+    }
+
+    .btn-whatsapp:hover {
+      background: #20ba5a;
+    }
+
+    /* --- Location Card --- */
+    .address-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--dark-petrol);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .address-text i {
+      color: var(--gold-accent);
+      margin-top: 3px;
+      font-size: 1.1rem;
+    }
+
+    .btn-maps {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px;
+      background: #ffffff;
+      color: var(--dark-petrol);
+      border: 1.5px solid var(--gold-accent);
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-maps:hover {
+      background: var(--gold-accent);
+      color: #ffffff;
+    }
+
+    /* --- Portrait Video Section --- */
+    .video-card {
+      width: 100%;
+      background: var(--card-white);
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 6px 20px rgba(31, 74, 73, 0.06);
+      border: 1px solid var(--light-green);
+      margin-bottom: 22px;
     }
 
     .video-wrapper {
       position: relative;
       width: 100%;
-      max-width: 280px; /* Keeps the vertical reel elegant and not oversized */
+      max-width: 270px;
       margin: 0 auto;
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
-      aspect-ratio: 9 / 16; /* Clean mobile portrait ratio */
+      aspect-ratio: 9 / 16;
       background: #000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    } 
+    }
 
     .video-wrapper video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-    } 
+    }
 
     /* --- Social Media Links Stack --- */
     .links-wrapper {
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
     }
 
     .link-card {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px 20px;
+      padding: 13px 18px;
       background: var(--card-white);
       color: var(--dark-petrol);
       text-decoration: none;
-      border-radius: 16px;
+      border-radius: 14px;
       border: 1.5px solid var(--light-green);
-      box-shadow: 0 4px 12px rgba(31, 74, 73, 0.05);
+      box-shadow: 0 4px 12px rgba(31, 74, 73, 0.04);
       font-weight: 700;
-      font-size: 1rem;
-      transition: all 0.25s ease;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
     }
 
     .link-card:hover {
       transform: translateY(-2px);
       border-color: var(--gold-accent);
-      box-shadow: 0 8px 20px rgba(31, 74, 73, 0.12);
+      box-shadow: 0 6px 16px rgba(31, 74, 73, 0.1);
     }
 
     .link-content {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
     .link-content i {
-      font-size: 1.35rem;
-      width: 24px;
+      font-size: 1.25rem;
+      width: 22px;
       text-align: center;
     }
 
     .arrow-icon {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--sage-green);
       transition: transform 0.2s ease;
     }
 
     .link-card:hover .arrow-icon {
-      transform: translateX(-4px); /* Moves left in RTL */
+      transform: translateX(-4px);
       color: var(--gold-accent);
     }
 
-    /* Icon brand accents */
-    .icon-whatsapp  { color: #25D366; }
     .icon-instagram { color: #E1306C; }
     .icon-tiktok    { color: #000000; }
     .icon-facebook  { color: #1877F2; }
 
-    /* Footer */
     .footer {
-      margin-top: 30px;
+      margin-top: 25px;
       font-size: 0.78rem;
       color: var(--sage-green);
     }
@@ -211,23 +331,81 @@
 
     <!-- Profile Picture -->
     <div class="avatar-wrapper">
-      <!-- Save her photo as 'profile.jpg' in the same folder -->
-      <img src="profile.jpeg" alt="رحمة إبراهيم" class="avatar" />
+      <img src="profile.jpg" alt="رحمة ابراهيم" class="avatar" />
     </div>
 
     <!-- Name & Title -->
-    <h1 class="name">رحمة إبراهيم</h1>
-    <div class="role-badge">أخصائية نفسية إكلينيكة</div>
-    <p class="bio">نقترب, نفهم... فنهدأ ونتقبل.</p>
+    <h1 class="name">رحمة ابراهيم</h1>
+    <div class="role-badge">أخصائي نفسي إكلينيكي • مشير إدمان</div>
+    <p class="bio">مساحة آمنة للتوعية والدعم النفسي وعلاج الإدمان وتطوير الذات.</p>
 
-    <!-- Portrait Video Highlight -->
-    <div class="video-card">
-      <div class="video-label">
-        <i class="fa-solid fa-play" style="color: var(--gold-accent); font-size: 0.8rem;"></i>
-        <span>فيديو تعريفي</span>
+    <!-- 1. Quick Booking Section (قسم حجز الجلسات) -->
+    <div class="section-card">
+      <div class="section-title">
+        <i class="fa-solid fa-calendar-check" style="color: var(--gold-accent);"></i>
+        <span>لحجز الجلسات</span>
       </div>
+
+      <!-- In-Clinic Booking -->
+      <div class="booking-item">
+        <div class="booking-header">
+          <div class="booking-type">
+            <i class="fa-solid fa-house-medical" style="color: var(--dark-petrol);"></i>
+            <span>حجز العيادة</span>
+          </div>
+          <span class="booking-phone">01157321813</span>
+        </div>
+        <div class="action-btn-group">
+          <a href="tel:+201157321813" class="btn-action btn-call">
+            <i class="fa-solid fa-phone"></i>
+            <span>اتصال هاتفي</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Online Booking -->
+      <div class="booking-item">
+        <div class="booking-header">
+          <div class="booking-type">
+            <i class="fa-solid fa-laptop-medical" style="color: var(--dark-petrol);"></i>
+            <span>حجز أونلاين (Online)</span>
+          </div>
+          <span class="booking-phone">01031210592</span>
+        </div>
+        <div class="action-btn-group">
+          <a href="https://wa.me/201031210592" target="_blank" rel="noopener noreferrer" class="btn-action btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واتساب</span>
+          </a>
+          <a href="tel:+201031210592" class="btn-action btn-call">
+            <i class="fa-solid fa-phone"></i>
+            <span>اتصال</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Clinic Location & Google Maps -->
+    <div class="section-card">
+      <div class="section-title">
+        <i class="fa-solid fa-location-dot" style="color: var(--gold-accent);"></i>
+        <span>عنوان العيادة</span>
+      </div>
+      <div class="address-text">
+        <i class="fa-solid fa-map-pin"></i>
+        <span>المحلة الكبرى، شارع شكري القوتلي، بجوار ألبان مشعل، أعلى صيدلية Safe Care</span>
+      </div>
+      
+      <!-- REPLACE THE href BELOW with her exact Google Maps pin link when you have it -->
+      <a href="https://www.google.com/maps?q=30.9771216,31.1719452&z=17&hl=en" target="_blank" rel="noopener noreferrer" class="btn-maps">
+        <i class="fa-solid fa-location-arrow"></i>
+        <span>فتح الموقع على خرائط Google</span>
+      </a>
+    </div>
+
+    <!-- 3. Portrait Video Highlight -->
+    <div class="video-card">
       <div class="video-wrapper">
-        <!-- Save her portrait video as 'intro.mp4' in the same folder -->
         <video controls playsinline preload="metadata" poster="profile.jpg">
           <source src="intro.mp4" type="video/mp4" />
           متصفحك لا يدعم تشغيل الفيديو.
@@ -235,32 +413,14 @@
       </div>
     </div>
 
-    <!-- Links List -->
+    <!-- 4. Social Media Links -->
     <div class="links-wrapper">
-
-      <!-- WhatsApp (Direct Chat with Egyptian Number) -->
-      <a href="https://wa.me/201031210592" target="_blank" rel="noopener noreferrer" class="link-card">
-        <div class="link-content">
-          <i class="fa-brands fa-whatsapp icon-whatsapp"></i>
-          <span>واتساب (تواصل / حجز)</span>
-        </div>
-        <i class="fa-solid fa-chevron-left arrow-icon"></i>
-      </a>
-
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/share/1C7WFiNSZN/" target="_blank" rel="noopener noreferrer" class="link-card">
-        <div class="link-content">
-          <i class="fa-brands fa-facebook-f icon-facebook"></i>
-          <span>فيسبوك</span>
-        </div>
-        <i class="fa-solid fa-chevron-left arrow-icon"></i>
-      </a>
 
       <!-- Instagram -->
       <a href="https://www.instagram.com/rahma_ibrahim_26" target="_blank" rel="noopener noreferrer" class="link-card">
         <div class="link-content">
           <i class="fa-brands fa-instagram icon-instagram"></i>
-          <span>انستجرام</span>
+          <span>إنستغرام</span>
         </div>
         <i class="fa-solid fa-chevron-left arrow-icon"></i>
       </a>
@@ -274,10 +434,19 @@
         <i class="fa-solid fa-chevron-left arrow-icon"></i>
       </a>
 
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/share/1C7WFiNSZN/" target="_blank" rel="noopener noreferrer" class="link-card">
+        <div class="link-content">
+          <i class="fa-brands fa-facebook-f icon-facebook"></i>
+          <span>فيسبوك</span>
+        </div>
+        <i class="fa-solid fa-chevron-left arrow-icon"></i>
+      </a>
+
     </div>
 
     <div class="footer">
-      جميع الحقوق محفوظة © رحمة إبراهيم
+      جميع الحقوق محفوظة © رحمة ابراهيم
     </div>
 
   </div>
